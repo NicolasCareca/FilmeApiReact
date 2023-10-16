@@ -4,7 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function Home() {
-    const imagePath = "https://image.tmdb.org/t/p/w500";
+    const imagePath = "https://image.tmdb.org/t/p/original";
 
     const [movies, setMovies] = useState([]);
     const KEY = process.env.REACT_APP_KEY;
@@ -27,7 +27,7 @@ function Home() {
     };
 
     return (
-        <div className="bg-gray-800 py-4 sm:py-6">
+        <div className="bg-gray-800 pb-4 sm:pb-6">
             <Carousel
                 showThumbs={false}
                 showStatus={false}
@@ -40,7 +40,7 @@ function Home() {
                     <div key={movie.id} className="carousel-slide flex flex-col">
                         <div className="carousel-image-container">
                             <img
-                                src={`${imagePath}${movie.poster_path}`}
+                                src={`${imagePath}${movie.backdrop_path}`}
                                 alt={movie.title}
                                 className={getCarouselImageClass()}
                             />
