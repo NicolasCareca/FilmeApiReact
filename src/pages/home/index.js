@@ -28,6 +28,7 @@ function Home() {
 
     return (
         <div className="bg-gray-800 pb-4 sm:pb-6">
+        <h1 className="text-2xl sm:text-3xl font-bold text-white text-center my-4 sm:my-6">Filmes em Destaque</h1>
             <Carousel
                 showThumbs={false}
                 showStatus={false}
@@ -63,7 +64,7 @@ function Home() {
 
 
             <div className="container mx-auto px-4 mt-4 sm:mt-6">
-                <h1 className="text-2xl sm:text-3xl font-bold text-indigo-600 text-center my-4 sm:my-6">Popular Movies</h1>
+                <h1 className="text-2xl sm:text-3xl font-bold text-white text-center my-4 sm:my-6">Catálogo</h1>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6">
                     {movies.map((movie) => (
                         <div key={movie.id} className="bg-gray-700 rounded-lg shadow-lg overflow-hidden">
@@ -73,9 +74,9 @@ function Home() {
                                 className="w-full h-64 object-cover"
                             />
                             <div className="p-4 flex flex-col h-full">
-                                <h2 className="text-lg font-semibold text-indigo-600 mb-2">{movie.title}</h2>
+                                <h2 className="text-lg font-semibold text-white mb-2">{movie.title}</h2>
                                 <Link to={`/${movie.id}`}>
-                                    <button className="w-full py-2 px-4 rounded-lg  border border-gray-900 font-semibold text-white-300 bg-indigo-400 hover:scale-105 transform duration-250 hover:bg-gray-900 cursor-pointer">
+                                    <button className="w-full py-2 px-4 rounded-lg  border border-gray-900 font-semibold text-white-300 bg-blue-700 hover:scale-105 transform duration-250 hover:bg-blue-900 cursor-pointer">
                                         Detalhes
                                     </button>
                                 </Link>
